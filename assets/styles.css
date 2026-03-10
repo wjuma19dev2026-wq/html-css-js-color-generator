@@ -1,0 +1,57 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  height: 100vh;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 35px;
+}
+
+.subtitle {
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+/* Cambiar tamaño y hacerlo circular */
+input[type='color'] {
+  width: 3rem; /* ancho */
+  height: 3rem; /* alto */
+  padding: 0.2rem; /* espacio interno pequeño */
+  border-radius: 50%; /* circular */
+  border: 2px solid #dee2e6;
+  background: none;
+  cursor: pointer;
+}
+
+/* Quitar el borde negro/feo por defecto en algunos navegadores */
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type='color']::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+/* Firefox */
+input[type='color']::-moz-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+/* Cambiar borde al hacer focus (usa variable de Bootstrap) */
+input[type='color']:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Ejemplo: borde con color primario de Bootstrap y sombra suave */
+input[type='color'].form-control-color {
+  border: 2px solid var(--bs-primary);
+  border-radius: 0.375rem; /* cuadrado con bordes suaves */
+  width: 4rem;
+  height: 2.5rem;
+}
